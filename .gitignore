@@ -1,0 +1,17 @@
+node_modules/
+coverage/
+*.lcov
+
+.env
+.env.*
+
+# Synthesized audio, and anything that looks like model data. Neither belongs
+# in this repo: the wavs are output, and the weights live behind the server.
+*.wav
+*.onnx
+*.pt
+*.bin
+
+.DS_Store
+Thumbs.db
+*.swp

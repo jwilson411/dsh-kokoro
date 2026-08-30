@@ -1,0 +1,57 @@
+{
+  "name": "dsh-kokoro",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: speak text with a local Kokoro TTS HTTP server and return the wav path, as the kokoro_tts tool. Ships no weights.",
+  "license": "MIT",
+  "type": "module",
+  "author": "jwilson411",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwilson411/dsh-kokoro.git"
+  },
+  "homepage": "https://github.com/jwilson411/dsh-kokoro#readme",
+  "bugs": {
+    "url": "https://github.com/jwilson411/dsh-kokoro/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "tts",
+    "text-to-speech",
+    "kokoro",
+    "speech"
+  ],
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-tools": "^0.1.1-rc.2"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-tools": "0.1.1-rc.2"
+  }
+}
